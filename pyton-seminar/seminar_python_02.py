@@ -1,17 +1,14 @@
 # Задача №10
-# print('введите числа ')
-# n = int(input())
-# k = 0
-# for i in range(n):
-#     v = int(input())
-#     if v == 1:
-#         k += 1
-# print(k if k<n/2 else n-k)
+print('введите числа ')
+n = int(input())
+k = 0
+for i in range(n):
+ v = int(input())
+ if v == 1:
+    k += 1
+ print(k if k<n/2 else n-k)
 
-
-
-
-
+#Задача №12
 s, p = (int(input()) for _ in '12')
 for x in range(1, 1001):
     y = s -x
@@ -19,6 +16,8 @@ for x in range(1, 1001):
         print(x, y)
         break
 
+#Задача №14
+print('введите число ')
 n = int(input())
 p = 1
 while p * 2 <= n:
