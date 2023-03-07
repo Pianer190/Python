@@ -1,3 +1,4 @@
+# import random
 # ussername =input('введите имя :')
 # if ussername == 'Аня':
 #  print('Привет Аня')
@@ -164,19 +165,19 @@
 # for item in dictionary:
 # print('{}: {}'.format(item, dictionary[item]))
 
-#Множество 
+# Множество
 # colors ={ 'red',  'blue', 'green'}
 # print(colors)
-# colors.add('red') 
+# colors.add('red')
 # print(colors)
-# colors.add('grey') #Добавление элемента 
+# colors.add('grey') #Добавление элемента
 # print(colors)
-# colors.remove('red') #удаление элемента из множества 
+# colors.remove('red') #удаление элемента из множества
 # print(colors)
-# colors.clear() #удаление всех элементов множества 
+# colors.clear() #удаление всех элементов множества
 # print(colors)
 
-# Операции со множеством 
+# Операции со множеством
 # a ={1,2,3,5,8}
 # b ={2,5,8,13,21}
 # c =a.copy() #Мы можем скопировать в переменную C  из данные из множества a c={1,2,3,5,8}
@@ -185,33 +186,48 @@
 # d1 =a.difference(b) # Из  значения а вычетаются все значения множества b  d1 ={1,3}
 # q =a.union(b).difference(a.intersection(b)) #{1,21,3,13}
 
-#Замороженное множество (не можем изменять )
+# Замороженное множество (не можем изменять )
 # a ={1,8,6}
 # b =frozenset(a)
 # print(b)
 
-#Конструктор списков 
-#Задача , создать список состоящий из  чётных чисел в диапозоне от 1 до 100 
-#Решение :
-#Создать список  чисел от 1 до 100 
+# Конструктор списков
+# Задача , создать список состоящий из  чётных чисел в диапозоне от 1 до 100
+# Решение :
+# Создать список  чисел от 1 до 100
 # list_1 =[]
 # for i in range(1,101):
 #     list_1.append(i)
 #     print(list_1)
 
-#Эту  функцию можно записать так :
-# list_1 = [i for i in range(1,101)]    
+# Эту  функцию можно записать так :
+# list_1 = [i for i in range(1,101)]
 # print(list_1)
 
-# добавить только чётные числа 
-# list_1 = [i for i in range(1,101) if i % 2 ==0] 
+# добавить только чётные числа
+# list_1 = [i for i in range(1,101) if i % 2 ==0]
 # print(list_1) #[2,4,6....,100]
 
-#Допустим вы решили создать пары каждому из чисел (кортежи)
-list_1 = [(i,i) for i in range(1,101) if i %2 ==0] 
-print(list_1) #[(2,2), (4,4), ...... ,(100,100)]
+# Допустим вы решили создать пары каждому из чисел (кортежи)
+# list_1 = [(i,i) for i in range(1,101) if i %2 ==0]
+# print(list_1) #[(2,2), (4,4), ...... ,(100,100)]
 
-#Также можно умножать , делить , прибавлять , вычетать . Например умножить значение на 2 только четные числа 
+# Также можно умножать , делить , прибавлять , вычетать . Например умножить значение на 2 только четные числа
 # list_1=[i*2 for i in range(10) if i % 2 ==0]
 # print(list_1) #[0,4,8,12,16]
 
+# Определение времени на выполнения операции
+import random
+import time
+import find_numbers 
+
+some_list = [random.randint(1, 1000) for _ in range(10**6)]
+some_set = {random.randint(1, 10**9) for _ in range(10**6)}
+find_namber = 6
+start = time.perf_counter()
+print( find_numbers in some_list)
+start = time.perf_counter()
+print(end - start)
+print(find_numbers in some_set)
+start = time.perf_counter()
+print(end - start)
