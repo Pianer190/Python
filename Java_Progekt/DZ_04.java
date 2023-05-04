@@ -7,7 +7,7 @@ public class DZ_04 {
         LinkedList<String> list = new LinkedList<>();
 
         while (true) {
-            System.out.println("Введите строку (Введите print выводит строки/revert удаляет предыдущую введенную строку):");
+            System.out.println("Введите строку (Введите print выводит строки/revert удаляет предыдущую введенную строку/exit выход):");
             String input = scanner.nextLine();
 
             
