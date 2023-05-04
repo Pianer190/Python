@@ -1,14 +1,16 @@
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class Task_03 {
+public class DZ_04 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         LinkedList<String> list = new LinkedList<>();
 
         while (true) {
-            System.out.println("Введите строку (print/revert для выполнения команд):");
+            System.out.println("Введите строку (Введите print выводит строки/revert удаляет предыдущую введенную строку):");
             String input = scanner.nextLine();
+
+            
 
             if (input.equals("print")) {
                 System.out.println("Строки в обратном порядке:");
@@ -23,8 +25,20 @@ public class Task_03 {
                     System.out.println("Нет сохраненных строк для удаления.");
                 }
             } else {
-                list.addLast(input);
+                
+                if ((input.equals("exit"))) {
+                    System.out.println(list.removeLast());
+                }
             }
+        
+        
+
+        
+        
         }
+
+   
+   
+   
     }
 }
